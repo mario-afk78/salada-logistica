@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>ADM - Jogo Stop</title>
+  <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+  <main class="container-timer">
+    <h1>ADM - Salada Logística</h1>
+    
+    <div id="timer">00s</div>
+    <div id="rodada">Rodada: 1 / 8</div>
+    <div id="letra">Letra: ?</div>
+    <div class="buttons">
+      <button id="btnIniciar">Iniciar Jogo</button>
+      <button id="btnLimparRespostas" class="btn-limpar">Limpar Respostas</button> 
+    </div>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Jogador</th><th>Categoria</th><th>Resposta</th></tr>
+        </thead>
+        <tbody id="tabelaRespostas"></tbody>
+      </table>
+    </div>
+  </main>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script src="adm.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap');
+
+/* Variáveis de Cores (para facilitar futuras alterações) */
+:root {
+  --rosa-claro: #f0bcc4; /* Rosa Pastel */
+  --rosa-medio: #ff99aa; /* Rosa um pouco mais escuro */
+  --rosa-escuro: #d46a7e; /* Rosa mais profundo para detalhes */
+  --rosa-muito-escuro: #a84a5c; /* Rosa quase vinho para ênfase */
+
+  --cinza-claro: #f0f0f0; /* Cinza bem claro */
+  --cinza-medio: #cccccc; /* Cinza médio para bordas/sombras */
+  --cinza-texto: #4a4a4a; /* Cinza escuro para texto principal */
+  --cinza-neutro: #6b7280; /* Cinza neutro para texto secundário */
+  --cinza-fundo-tabela: #f7fafc; /* Fundo leve para cabeçalho da tabela */
+}
+
+/* Reset */
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+ font-family: 'Inter', sans-serif;
+ background-color: var(--cinza-claro); /* Fundo geral em cinza claro */
+ color: var(--cinza-texto); /* Texto padrão do corpo em cinza escuro */
+ line-height: 1.6;
+ min-height: 100vh;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ padding: 4rem 2rem;
+ gap: 3rem;
+}
+
+/* Estilos para o container principal da Salada Logística */
+div.container {
+ max-width: 1200px;
+ width: 100%;
+ padding: 3rem 4rem;
+ border-radius: 0.75rem;
+ box-shadow: 0 10px 20px rgba(var(--rosa-muito-escuro), 0.3); /* Sombra em tom de rosa */
+ background-color: #ffffff; /* Manter fundo branco para o container */
+ text-align: center;
+}
+
+/* Estilos para o container principal do Jogo de Rodadas */
+main.container-timer {
+ max-width: 1200px;
+ width: 100%;
+ padding: 3rem 4rem;
+ border-radius: 0.75rem;
+  box-shadow: 0 10px 20px rgba(var(--rosa-muito-escuro), 0.3); /* Sombra em tom de rosa */
+ background-color: #ffffff; /* Manter fundo branco para o container */
+ text-align: center;
+}
+
+h1 {
+ font-weight: 800;
+ font-size: 4.5rem;
+ color: var(--rosa-muito-escuro); /* Títulos H1 em rosa muito escuro */
+ margin-bottom: 2rem;
+ line-height: 1.1;
+}
+
+h2 {
+ font-weight: 600;
+ font-size: 2.25rem;
+ margin: 1.5rem 0 2rem;
+ color: var(--cinza-neutro); /* Títulos H2 em cinza neutro */
+}
+
+#timer {
+ font-size: 2.5rem;
+ color: var(--rosa-escuro); /* Timer em rosa escuro */
+ margin-bottom: 3rem;
+ font-weight: 700;
+}
+
+.buttons {
+ display: inline-flex;
+ gap: 2rem;
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+/* Estilos para TODOS os botões */
+button {
+ background-color: var(--rosa-medio); /* Fundo dos botões em rosa médio */
+ border: none;
+ border-radius: 0.75rem;
+ color: var(--cinza-texto); /* Texto dos botões em cinza escuro */
+ cursor: pointer;
+ font-family: 'Inter', sans-serif;
+ font-weight: 700;
+ font-size: 1.5rem;
+ padding: 1rem 3rem;
+ box-shadow: 0 8px 15px rgba(var(--rosa-medio), 0.5); /* Sombra dos botões em rosa médio */
+ transition:
+ background-color 0.3s ease,
+ box-shadow 0.3s ease,
+ transform 0.15s ease;
+ user-select: none;
+ min-width: 160px;
+ text-align: center;
+}
+
+button:hover:not(:disabled) {
+ background-color: var(--rosa-escuro); /* Rosa mais escuro ao passar o mouse */
+ box-shadow: 0 12px 24px rgba(var(--rosa-escuro), 0.6);
+ transform: translateY(-3px);
+}
+
+button:active:not(:disabled) {
+ transform: translateY(-1px);
+ box-shadow: 0 6px 12px rgba(var(--rosa-escuro), 0.4);
+}
+
+button:disabled {
+ background-color: var(--cinza-medio); /* Botões desabilitados em cinza médio */
+ cursor: not-allowed;
+ box-shadow: none;
+ transform: none;
+}
+
+/* Estilo específico para o botão "Parar Jogo" (com nova cor vermelha para destaque de "parar") */
+#btnParar {
+ background-color: #dc3545; /* Vermelho para o botão "Parar" */
+ color: #ffffff; /* Texto branco para o botão "Parar" */
+}
+
+#btnParar:hover:not(:disabled) {
+ background-color: #c82333; /* Vermelho mais escuro ao passar o mouse em "Parar" */
+ box-shadow: 0 12px 24px rgba(220, 53, 69, 0.4);
+}
+
+#btnParar:active:not(:disabled) {
+ box-shadow: 0 6px 12px rgba(220, 53, 69, 0.3);
+}
+
+button:focus-visible {
+ outline: 4px solid var(--rosa-escuro); /* Contorno rosa ao focar */
+ outline-offset: 3px;
+}
+
+/* Estilos para as CAIXAS DE TEXTO (input) */
+input {
+ background-color: var(--rosa-claro); /* Fundo rosa claro */
+ color: var(--cinza-texto); /* Texto cinza escuro */
+ border: 1px solid var(--rosa-medio); /* Borda rosa mais escura */
+ padding: 0.5rem 0.75rem;
+ border-radius: 0.25rem;
+ font-family: 'Inter', sans-serif;
+ font-size: 1rem;
+ width: 100%;
+ box-sizing: border-box;
+}
+
+input:focus {
+ outline: none;
+ border-color: var(--rosa-muito-escuro); /* Uma cor mais escura ao focar */
+ box-shadow: 0 0 0 3px rgba(var(--rosa-muito-escuro), 0.2); /* Sombra suave ao focar */
+}
+
+/* Estilos para a tabela */
+.table-wrapper {
+ overflow-x: auto;
+ margin-top: 2rem;
+ margin-bottom: 2rem;
+}
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ margin-bottom: 1.5rem;
+ background-color: #ffffff;
+ border-radius: 0.5rem;
+ overflow: hidden;
+ box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+ border: 1px solid var(--cinza-medio); /* Borda sutil em cinza médio */
+ padding: 0.75rem 1rem;
+ text-align: left;
+ white-space: nowrap;
+}
+
+thead th {
+ background-color: var(--cinza-fundo-tabela); /* Fundo levemente cinza para o cabeçalho */
+ color: var(--cinza-texto); /* Texto escuro para o cabeçalho */
+ font-weight: 600;
+ text-transform: uppercase;
+ font-size: 0.875rem;
+}
+
+tbody tr:nth-child(even) {
+ background-color: var(--cinza-claro); /* Alterna cor de fundo para linhas pares em cinza claro */
+ transition: all 0.5 linear;
+}
+
+tbody tr:hover {
+ background-color: #ffd1d8; /* Mudar cor da linha ao passar o mouse para rosa claro */
+ transition: all 0.5 linear;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ div.container, main.container-timer {
+ padding: 2rem 2.5rem;
+ }
+ h1 {
+ font-size: 3rem;
+ }
+ h2 {
+ font-size: 1.75rem;
+ }
+ #timer {
+ font-size: 2rem;
+ margin-bottom: 2.5rem;
+ }
+ button {
+ font-size: 1.25rem;
+ padding: 0.85rem 2.5rem;
+ min-width: 140px;
+ }
+ input {
+ padding: 0.4rem 0.6rem;
+font-size: 0.9rem;
+ }
+ th, td {
+ padding: 0.6rem 0.8rem;
+ font-size: 0.9rem;
+ }
+}
+
+@media (max-width: 480px) {
+ div.container, main.container-timer {
+ padding: 1.5rem 1.5rem;
+ } h1 {
+ font-size: 2.25rem;
+ }
+ h2 {
+ font-size: 1.3rem;
+ }
+ #timer {
+font-size: 1.5rem;
+ margin-bottom: 2rem;
+ }
+ .buttons {
+ gap: 1rem;
+ }
+ button {
+ font-size: 1rem;
+ padding: 0.75rem 2rem;
+ min-width: 120px;
+ }
+ input {
+ padding: 0.3rem 0.5rem;
+ font-size: 0.8rem;
+ }
+ th, td {
+ padding: 0.5rem 0.7rem;
+ font-size: 0.8rem;
+ }
+}

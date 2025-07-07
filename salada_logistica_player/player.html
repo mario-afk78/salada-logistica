@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogador - Jogo Stop</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container-timer">
+    <h1>Jogo Stop</h1>
+    <div id="timer">Aguardando início...</div>
+    <div id="rodada">Rodada: ?</div>
+    <div id="letra">Letra: ?</div>
+    <h2 id="nomeJogador">Jogador</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr><th>Categoria</th><th id="colunaJogador">Suas Respostas</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Material</td><td><input type="text" id="cat-Material" disabled></td></tr>
+          <tr><td>Objeto encontrado em um armazém</td><td><input type="text" id="cat-Objeto encontrado em um armazém" disabled></td></tr>
+          <tr><td>Profissão</td><td><input type="text" id="cat-Profissão" disabled></td></tr>
+          <tr><td>Empresa de entrega ou transporte</td><td><input type="text" id="cat-Empresa de entrega ou transporte" disabled></td></tr>
+          <tr><td>Verbo usado na logística</td><td><input type="text" id="cat-Verbo usado na logística" disabled></td></tr>
+          <tr><td>Equipamento de transporte ou movimentação</td><td><input type="text" id="cat-Equipamento de transporte ou movimentação" disabled></td></tr>
+          <tr><td>Objeto de segurança no trabalho</td><td><input type="text" id="cat-Objeto de segurança no trabalho" disabled></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <button id="btnStop">STOP</button>
+  </main>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script src="player.js"></script>
+</body>
+</html>
